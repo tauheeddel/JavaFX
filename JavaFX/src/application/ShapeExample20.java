@@ -5,6 +5,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -41,9 +42,21 @@ public class ShapeExample20 extends Application {
 		
 		Circle c1 = new Circle(50,150,50);
 		c1.setStroke(Color.BLACK);
-		c1.setFill(Color.GREEN);
+		c1.setFill(Color.CHOCOLATE);
+		c1.setStrokeWidth(5);
 		gp.getChildren().addAll(c1);
 		
+		Ellipse e1 = new Ellipse(300, 250, 200, 50);
+		e1.setFill(Color.RED);
+		e1.setStroke(Color.BLACK);
+		e1.setStrokeWidth(5);
+		gp.getChildren().add(e1);
+		
+		Ellipse e2 = new Ellipse(250, 50, 200, 50);
+		e2.setFill(Color.DARKOLIVEGREEN);
+		e2.setStroke(Color.BLACK);
+		e2.setStrokeWidth(5);
+		gp.getChildren().add(e2);
 		
 		Scene scene = new Scene(gp, 500,550);
 		primaryStage.setScene(scene);
