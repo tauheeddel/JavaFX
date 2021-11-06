@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Arc;
+import javafx.scene.shape.ArcType;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
@@ -57,6 +59,29 @@ public class ShapeExample20 extends Application {
 		e2.setStroke(Color.BLACK);
 		e2.setStrokeWidth(5);
 		gp.getChildren().add(e2);
+		
+		//Open, round, chord
+		//Create an arc 
+		Arc a1 = new Arc(100, 500, 100, 100, 90, 90);
+		a1.setFill(null);
+		a1.setStroke(Color.BLACK);
+		a1.setType(ArcType.OPEN);
+		a1.setStrokeWidth(5);
+		gp.getChildren().add(a1);
+		
+		Arc a2 = new Arc(200, 450, 100, 100, 45, 60);
+		a2.setFill(null);
+		a2.setStroke(Color.BLUE);
+		a2.setType(ArcType.CHORD);
+		a2.setStrokeWidth(5);
+		gp.getChildren().add(a2);
+		
+		Arc a3 = new Arc(600, 550, 100, 100, 40, 40);
+		a3.setFill(Color.YELLOW);
+		a3.setStroke(Color.BLUE);
+		a3.setType(ArcType.ROUND);
+		a3.setStrokeWidth(5);
+		gp.getChildren().add(a3);
 		
 		Scene scene = new Scene(gp, 500,550);
 		primaryStage.setScene(scene);
