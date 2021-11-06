@@ -1,9 +1,12 @@
 package application;
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class ShapeExample20 extends Application {
@@ -19,11 +22,32 @@ public class ShapeExample20 extends Application {
 			line2.setStroke(Color.LIGHTGREY);
 			gp.getChildren().addAll(line1, line2);
 		}
+		//Create a rectangle 
+		Rectangle r1 = new Rectangle(250, 325, 100, 140);
+		r1.setStroke(Color.BLACK);
+		r1.setFill(Color.YELLOW);
+		r1.setStrokeWidth(5);
+		gp.getChildren().add(r1);
+		
+		
+		//Create a second rectangle 
+		Rectangle r2 = new Rectangle(50,100,200,100);
+		r2.setStroke(Color.RED);
+		r2.setFill(Color.BLUE);
+		r2.setStrokeWidth(5);
+		r2.setArcWidth(25);
+		r2.setArcHeight(25);
+		gp.getChildren().addAll(r2);
+		
+		Circle c1 = new Circle(50,150,50);
+		c1.setStroke(Color.BLACK);
+		c1.setFill(Color.GREEN);
+		gp.getChildren().addAll(c1);
+		
+		
 		Scene scene = new Scene(gp, 500,550);
 		primaryStage.setScene(scene);
 		primaryStage.show();
-			
-			
 	}
 
 	public static void main(String[] args) {
