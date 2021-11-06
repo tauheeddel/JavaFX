@@ -1,3 +1,5 @@
+//BorderPaneExample7.java
+//--module-path C:\Users<user>\Downloads\javafx-sdk-11\lib --add-modules=javafx.controls
 package application;
 
 import javafx.application.Application;
